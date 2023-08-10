@@ -37,7 +37,7 @@
 {
     "action":"auth-login",
     "header":{
-        "reqid":"192839",   // 透传值，设备内唯一
+        "reqid":"192839",   // 透传值，设备内唯一 (注意 reqid 需  请求<=>响应 一一对应）
     },
     "body":{
         "user":"admin", // 默认用户名
