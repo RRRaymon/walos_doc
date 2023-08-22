@@ -59,7 +59,7 @@
     },
     "body":{
         "timezone":-480,
-        "timestamp":161589233
+        "timestamp":161589233 //此处为秒
     }
 }
 ```
@@ -143,7 +143,7 @@
     "body":{
         "userid":"1avsoHu2EeqZmH943F8eUg==",
         "type":"open", // "open" - 开门动作(不填默认为开门); "close“关门动作；"silent"开门但不播放声音
-        "delay":12,    // 延时多久关门，不填只默认5s，-1为常开或常闭
+        "delay":5,    // 延时多久关门，不填只默认5s，-1为常开或常闭
     }
 }
 ```
@@ -159,9 +159,9 @@
 }
 ```
 
-#### 上传文件
+#### 上传升级文件
 
-**上传文件，单次数据长度必须在64kB以内，其data数据在转base64前应以64kB长度切片**
+**上传升级文件，单次数据长度必须在64kB以内，其data数据在转base64前应以64kB长度切片**
 
 - 请求
 
@@ -200,7 +200,7 @@
 }
 ```
 
-#### ~~升级设备~~
+#### 升级设备
 
 - 请求
 
@@ -277,18 +277,17 @@
     },
     
     "body":{
-        "type":"snapshot",      // snapshot,快照图片； logr,识别日志图片；
+        "type":"logr",      // snapshot,快照图片； logr,识别日志图片；
         "chanel":0,
         "offset":0,
         "size": 32000,
         "timestamp":1584518255389,  // 生成快照的时间或识别日志图片生成时间
-        "seqnum": 6,                // 事件编号，下载识别日志图片时填写，当填写seqnum时，忽略timestamp值
     }
 }
 ```
 
 > timestamp : 生成快照时返回的时间戳
-> chanel : 准备获取的摄像头通道，目前仅支持chanel 0，红外通道暂不支持
+> ~~chanel : 准备获取的摄像头通道，目前仅支持chanel 0，红外通道暂不支持~~
 
 - 响应
 
@@ -301,9 +300,9 @@
     },
     
     "body": {
-        "type":"snapshot",
+        "type":"logr",
         "filesize":32678,
-        "filename":"SNAP0-1584518255389.jpg",
+        "filename":"1584518255389.jpg",
         "offset":0,
         "size": 32000,
         "data":"base64-encoded file data"
