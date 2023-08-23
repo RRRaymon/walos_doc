@@ -142,7 +142,7 @@
     },
     "body":{
         "userid":"1avsoHu2EeqZmH943F8eUg==",
-        "type":"open", // "open" - 开门动作(不填默认为开门); "close“关门动作；"silent"开门但不播放声音
+        "type":"open", // "open" - 开门动作(不填默认为开门); "close“关门动作；"silent"开门但不播放声音，（有部分场景扩展开门请求，仅用于部分定制场景，正常不可用，如"qr_success"二维码校验成功,"qr_deny"二维码校验失败，）
         "delay":5,    // 延时多久关门，不填只默认5s，-1为常开或常闭
     }
 }

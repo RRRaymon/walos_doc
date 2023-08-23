@@ -18,8 +18,10 @@
 {
     "seqnum": 6,                // 事件编号，设备唯一
     "timestamp": 1587985190,    // 事件发生时的时间戳, 精确到毫秒
-    "event":"face",          // 事件类型：face -人脸识别，door - 开门状态， remote - 远程开门, push - 按键开门， qrcode - 扫码事件
-                            // fire -火警告警， disa - 防拆告警， reset - 复位，card - 刷卡， visitor 访客， therm - 测温
+    "event":"face",          
+    // 事件类型：face -人脸识别， qrcode - 扫码事件上报，door - 开门状态， remote - 远程开门,
+    // push - 按键开门，fire -火警告警， disa - 防拆告警， reset - 复位，card - 刷卡， 
+    // visitor 访客， therm - 测温
     "device-id":"00bs9iskdi",       // 设备ID号，不使用可忽略
     "ip-addr": "192.168.20.20",     // 设备IP地址，不使用可忽略
 
